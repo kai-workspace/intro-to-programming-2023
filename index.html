@@ -44,6 +44,43 @@ Kai Yau
 </ul>
 </section>
 
+<section>
+    <h2>Leave a Message</h2>
+    <!-- HTML form element with a name attribute that equals "leave_message" -->
+        <form name="leave_message">
+            <!-- <input> element with attributes: type "text", name "usersName", and required true -->
+            <label for="usersName">Name:</label>
+            <input type="text" name="usersName" required>
+            <br>
+
+            <!-- <input> element with attributes: type "email", name "usersEmail", and required true -->
+            <label for="usersEmail">Email:</label>
+            <input type="email" name="usersEmail" required>
+            <br>
+
+            <!-- <textarea> element with attributes: name "usersMessage" and required true -->
+            <label for="usersMessage">Message:</label>
+            <textarea name="usersMessage" required></textarea>
+            <br>
+
+            <!-- <button> element that says "Submit" and has type attribute equal to "submit" -->
+            <button type="submit">Submit</button>
+
+            <!-- Each form field should also have a corresponding <label> element -->
+            <!-- (Optional) Use <br> elements to stack the form fields -->
+
+        </form>
+</section>
+
+<!-- After the <section> element from the previous step, create a new <section> element with an id of "messages" -->
+<section id="messages">
+    <!-- Inside that element, create a level-two heading that says "Messages" -->
+    <h2>Messages</h2>
+        <!-- After the heading, add an empty unordered list (<ul>) element -->
+        <ul></ul>
+</section>
+
+
 <footer></footer>
 
 <script src="js/index.js"></script>

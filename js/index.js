@@ -51,3 +51,80 @@ for (var i=0; i<skills.length; i++){
 //On the next line, append the skill element to the skillsList element. HINT: appendChild method
     skillsList.appendChild(skill);  
 }
+
+
+//HANDLE MESSAGE FORM SUBMIT
+
+// Use "DOM Selection" to select the "leave_message" form by name attribute and store it in a variable named messageForm
+var messageForm = document.forms.leave_message;
+
+// Add an event listener to the messageForm element that handles the "submit" event. HINT: addEventListener method
+messageForm.addEventListener('submit', function(event) {
+    
+    //Inside the callback function for your event listener, create a new variable for each of the three form fields and retrieve the value from the event
+    //HINT: event.target is the form, event.target.usersName is the first input element
+
+    //Inside the callback function, above the other code you just wrote, add a new line to prevent the default refreshing behavior of the "submit" event
+    //HINT: preventDefault methodPrevent default form submission
+    event.preventDefault();
+
+    // Retrieve the values from the form fields
+    var userName = event.target.usersName.value;
+    var userEmail = event.target.usersEmail.value;
+    var userMessage = event.target.usersMessage.value;
+
+    //Inside the callback function for your event listener, add a console.log statement to log the three variables you created in the previous step to the console
+    console.log('Name:', userName);
+    console.log('Email:', userEmail);
+    console.log('Message:', userMessage);
+
+    
+    //DISPLAY MESSAGES IN LIST
+
+    // Use "DOM Selection" to select the #messages section by id and store it in a variable named messageSection
+    var messageSection = document.getElementById('messages');
+
+    // Use "DOM Selector", Query the messageSection (instead of the entire document) to find the <ul> element and store it in a variable named messageList
+    var messageList = messageSection.querySelector('ul');
+  
+    // Create a new list item (li) element and store it in a variable named newMessage
+    var newMessage = document.createElement('li');
+  
+    // Set the inner HTML of the newMessage element with the following info: 
+        // <a> element that displays the "usersName" and links to the "usersEmail" (HINT: use the mailto: prefix)
+        // <span> element that displays the "usersMessage"
+    newMessage.innerHTML = '<a href="mailto:' + userEmail + '">' + userName + '</a> wrote:  <span>' + userMessage + '</span>';
+  
+    // Create a new <button> element and store it in a variable named removeButton
+
+        
+    var removeButton = document.createElement('button');
+  
+        // Set properties for the removeButton
+        // Set the inner text to "remove"
+        // Set the type attribute to "button"
+    removeButton.innerText = 'remove';
+    removeButton.type = 'button';
+  
+        // Add an event listener to the removeButton element that handles the "click" event
+            // Inside the callback function, find the button's parent element using DOM Traversal (hint: parentNode property) and store it in a variable named entry
+            // Remove the entry element from the DOM (hint: remove method)
+    removeButton.addEventListener('click', function() 
+    {
+            // Find the button's parent element using DOM Traversal
+    var entry = removeButton.parentNode;
+            // Remove the entry element from the DOM
+    entry.remove();
+    });
+  
+        // Append the removeButton to the newMessage element. HINT: appendChild method
+        newMessage.appendChild(removeButton);
+  
+        // Append the newMessage to the messageList element. 
+        messageList.appendChild(newMessage);
+  
+
+   // Inside the callback function, on the very last line, add a new line of code to clear the form. HINT: reset method
+    messageForm.reset();
+
+});
