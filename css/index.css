@@ -1,0 +1,82 @@
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 20;
+    padding: 20;
+}
+
+/* Apply a background color to the page body */
+body {
+    background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif; /* Default font family */
+    color: #333; /* Default text color */
+}
+
+/* Apply spacing between sections */
+section {
+    margin-bottom: 20px;
+}
+
+/* Customize headings */
+h1, h2, h3 {
+    color: #0066cc; /* Heading text color */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style list items in "Experience" and "Skills" sections */
+#experience ul, #skills ul {
+    list-style-type: none;
+}
+
+#experience li, #skills li {
+    background-color: #fff5cc; /* Background color for list items */
+    padding: 10px;
+    margin-bottom: 5px; /* Spacing between list items */
+}
+
+/* Style the "Leave a Message" form elements */
+form {
+    margin-top: 20px; /* Spacing above the form */
+}
+
+label {
+    font-size: 16px; /* Font size for labels */
+    color: #0066cc; /* Label text color */
+    margin-bottom: 5px; /* Spacing between labels and inputs */
+    display: block; /* Make labels block elements to stack them */
+}
+
+input, textarea {
+    font-size: 14px; /* Font size for inputs and textarea */
+    padding: 8px;
+    margin-bottom: 10px; /* Spacing between form fields */
+    border: 1px solid #ccc; /* Border for inputs and textarea */
+}
+
+button {
+    background-color: #0066cc; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none;
+    cursor: pointer;
+}
+
+/* Style "Messages" list items */
+#messages ul {
+    list-style-type: none;
+}
+
+#messages li {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Customize the footer */
+footer {
+    background-color: #c3b5b5; /* Footer background color */
+    color: #fff; /* Footer text color */
+    padding: 10px;
+}
