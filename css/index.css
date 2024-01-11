@@ -1,8 +1,8 @@
 
 /* Reset default margin and padding */
 body, h1, h2, h3, p, ul, li, form {
-    margin: 20;
-    padding: 20;
+    margin: 20px;
+    padding: 0px;
 }
 
 /* Apply a background color to the page body */
@@ -14,6 +14,8 @@ body {
 
 /* Apply spacing between sections */
 section {
+    margin-bottom: 20px;
+    padding-top: 60px; /* Adjust this value based on your header height */
     margin-bottom: 20px;
 }
 
@@ -28,6 +30,7 @@ h1, h2, h3 {
 #experience ul, #skills ul {
     list-style-type: none;
 }
+
 
 #experience li, #skills li {
     background-color: #fff5cc; /* Background color for list items */
@@ -79,4 +82,130 @@ footer {
     background-color: #c3b5b5; /* Footer background color */
     color: #fff; /* Footer text color */
     padding: 10px;
+}
+
+
+/* Sticky/fixed navigational header */
+header {
+    background-color: #91bac9;
+    color: #1c094e;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navigation menu */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: #0e0101;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Flexbox layout for the Experience items */
+#experience {
+    margin-top: 20px; /* Add some margin to separate it from the header */
+}
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-between; /* Distribute items evenly across the row */
+}
+
+.experience-item {
+    width: calc(45% - 10px); /* Adjust the width of each item, considering the space between items */
+    margin-bottom: 20px; /* Add space between rows, adjust as needed */
+    background-color: #d7f4c8; /* Background color for each item */
+    padding: 20px;
+    border: 2px solid #8d1111; /* Border for each item */
+    /* Additional styles for each item */
+}
+
+/* Flexbox layout for the Leave a Message form */
+#leave-message {
+    margin-top: 20px; /* Add some margin to separate it from the header */
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+}
+
+label {
+    font-size: 16px; /* Font size for labels */
+    color: #c10abd; /* Label text color */
+    margin-bottom: 5px; /* Spacing between labels and inputs */
+}
+
+input,
+textarea {
+    font-size: 14px; /* Font size for inputs and textarea */
+    padding: 8px;
+    margin-bottom: 10px; /* Spacing between form fields */
+    border: 2px solid #870d0d; /* Border for inputs and textarea */
+}
+
+button {
+    background-color: #c10abd; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none;
+    cursor: pointer;
+}
+
+ 
+/* Media queries for responsiveness */
+
+/* For screens up to 767px (mobile) */
+@media screen and (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 20px;
+    }
+
+    #experience .experience-item {
+        width: 100%;
+    }
+
+    #leave-message .message-form {
+        width: 100%;
+    }
+}
+
+/* For screens between 768px and 1023px (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h1, h2, h3 {
+        font-size: 22px;
+    }
+
+    #experience .experience-item {
+        width: calc(45% - 10px);
+    }
+}
+
+/* For screens 1024px and above (desktop) */
+@media screen and (min-width: 1024px) {
+    h1, h2, h3 {
+        font-size: 24px;
+    }
+
+    #experience .experience-item {
+        width: calc(45% - 10px);
+    }
+}
+
+/* Apply the Google Fonts font-family to the body */
+body {
+    font-family: 'Open Sans', sans-serif;
 }

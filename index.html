@@ -2,33 +2,48 @@
 <html>
     
 <head>
-    <title>Title of the document</title>
+    <title>Kai portfolio</title>
     <meta charset="utf-8" />
     <meta name="keywords" content="HTML, CSS, JavaScript, resume">
     <meta name="author" content="Kai Yau">
-
+    <!-- Link to the Google Fonts stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
     <!-- Before the closing </head> tag, link to the CSS file
         insert a <link> element with a rel attribute of "stylesheet"
         and an href attribute that specifies the relative path to your CSS file (i.e. css/index.css)-->
     <link rel="stylesheet" href="css/index.css">
 
-    <!-- Link to the Google Fonts stylesheet -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
 
-    <!-- Apply the Google Fonts font-family to the body -->
+    <!-- Apply the Google Fonts font-family to the body
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
         }
-    </style>
+    </style> -->
 
 </head>
 
 <body>
+Kai Yau
+    <!-- Navigational Header goes here -->
+    <header>
+        
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#connect">Connect</a>
+            <a href="#leave-message">Leave a Message</a>
+            <a href="#messages">Messages</a>
+            
+        </nav>
+    </header>
 
     <h1> Kai Yau </h1>
 
-    <section>
+
+
+    <section id="about">
         <h1>About</h1>
         <p> "About" to be added </p>
         <ul>
@@ -38,14 +53,23 @@
 
     </section>
 
-    <section>
+
+    <!--Change the layout of your "Experience" section using rows and columns so items are displayed in a grid rather than a list.HINT: use either Flexbox or CSS Grid. I used Flexbox-->
+    <section id="experience">
         <h1>Experience</h1>
         <p> "Experience" to be added </p>
-        <ul>
+        <div class="experience-container">
+
+            <div class="experience-item">will add experience #1 later</div>
+            <div class="experience-item">will add experience #2 later</div>
+            <div class="experience-item">will add experience #3 later</div>
+            <div class="experience-item">will add experience #4 later</div>
+            <!-- Add more experience items as needed -->
+        </div>
+       <!-- <ul>
             <li>placeholder 1</li>
             <li>placeholder 2</li>
-        </ul>
-
+        </ul> -->
     </section>
 
     <section id="skills">
@@ -53,16 +77,16 @@
             <ul></ul>
     </section>
 
-    <section>
+    <section id="connect">
         <h1>Connect</h1>
         <p> "Connect" to be added </p>
-        <ul>
-            <li>placeholder 1</li>
-            <li>placeholder 2</li>
-        </ul>
+          <ul>
+             <li>placeholder 1</li>
+             <li>placeholder 2</li>
+          </ul> 
     </section>
 
-    <section>
+    <section id="leave-message">
         <h2>Leave a Message</h2>
         <!-- HTML form element with a name attribute that equals "leave_message" -->
             <form name="leave_message">
