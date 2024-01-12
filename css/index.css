@@ -8,7 +8,8 @@ body, h1, h2, h3, p, ul, li, form {
 /* Apply a background color to the page body */
 body {
     background-color: #f2f2f2;
-    font-family: 'Arial', sans-serif; /* Default font family */
+    font-family: 'Arial', sans-serif, 'Open San';  /* Default font family */
+    /* Apply the Google Fonts font-family to the body */
     color: #333; /* Default text color */
 }
 
@@ -131,37 +132,48 @@ nav a {
 
 /* Flexbox layout for the Leave a Message form */
 #leave-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px; /* Add some margin to separate it from the header */
 }
 
-.message-form {
+.flex-form {
     display: flex;
     flex-direction: column; /* Arrange items in a column */
+    max-width: 300px; /* Adjust the width as needed */
 }
 
-label {
+
+.flex-form label {
+    margin-bottom: 8px;
     font-size: 16px; /* Font size for labels */
     color: #c10abd; /* Label text color */
     margin-bottom: 5px; /* Spacing between labels and inputs */
 }
-
-input,
-textarea {
+ 
+.flex-form input,
+.flex-form textarea {
     font-size: 14px; /* Font size for inputs and textarea */
     padding: 8px;
     margin-bottom: 10px; /* Spacing between form fields */
     border: 2px solid #870d0d; /* Border for inputs and textarea */
 }
 
-button {
+.flex-form button {
+    padding: 10px; /*Padding for button*/
     background-color: #c10abd; /* Button background color */
-    color: #fff; /* Button text color */
-    padding: 10px 20px; /* Padding for the button */
+    color: white;/*Button text color*/
     border: none;
     cursor: pointer;
 }
 
- 
+.flex-form button:hover {
+    background-color: #71bed8;
+}
+
+
+
 /* Media queries for responsiveness */
 
 /* For screens up to 767px (mobile) */
