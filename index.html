@@ -85,25 +85,22 @@ Kai Yau
              <li>placeholder 2</li>
           </ul> 
     </section>
-
-    <section id="leave-message">
+    <!-- Modify Section Leave a Message into Flexbox -->
+    <section id="leave-message" class="flex-container">
         <h2>Leave a Message</h2>
         <!-- HTML form element with a name attribute that equals "leave_message" -->
-            <form name="leave_message">
+            <form name="leave_message" class="flex-form">
                 <!-- <input> element with attributes: type "text", name "usersName", and required true -->
                 <label for="usersName">Name:</label>
                 <input type="text" name="usersName" required>
-                <br>
 
                 <!-- <input> element with attributes: type "email", name "usersEmail", and required true -->
                 <label for="usersEmail">Email:</label>
                 <input type="email" name="usersEmail" required>
-                <br>
 
                 <!-- <textarea> element with attributes: name "usersMessage" and required true -->
                 <label for="usersMessage">Message:</label>
                 <textarea name="usersMessage" required></textarea>
-                <br>
 
                 <!-- <button> element that says "Submit" and has type attribute equal to "submit" -->
                 <button type="submit">Submit</button>
