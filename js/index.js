@@ -134,25 +134,51 @@ messageForm.addEventListener('submit', function(event) {
 // Assuming you have a variable GITHUB_USERNAME with your GitHub username
 const GITHUB_USERNAME = "kai-workspace"; // Replace with your actual GitHub username
 
+// Create a Fetch API request
+fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+    .then(response => response.json()) // Parse the response JSON data
+    .then(repositories => {
+        // DOM Selection
+        const projectSection = document.getElementById("projects");
+        const projectList = projectSection.querySelector("ul");
+
+        // Loop through repositories
+        repositories.forEach(repo => {
+            // Create a new list item element
+            const project = document.createElement("li");
+
+            // Set the inner text to the repository name
+            project.innerText = repo.name;
+
+            // Append the project element to the projectList
+            projectList.appendChild(project);
+        });
+    })
+    .catch(error => console.error("Error fetching data:", error));
+
+
+/*
 // Create a new XMLHttpRequest object
 const githubRequest = new XMLHttpRequest();
 
 // Specify the request details using the open method
 githubRequest.open("GET", `https://api.github.com/users/${GITHUB_USERNAME}/repos`);
 
-
 // Send the request
 githubRequest.send();
+*/
+
 /*
 // Set up an event listener to handle the response
 githubRequest.onreadystatechange = function () {
     if (githubRequest.readyState === 4 && githubRequest.status === 200) {
         // Handle the response here
         console.log(JSON.parse(githubRequest.responseText));
-    }
+    } 
 };
 */
 
+/*
 // Set up a "load" event listener to handle the response
 githubRequest.addEventListener("load", function () {
     const repositories = JSON.parse(this.response);
@@ -178,5 +204,6 @@ for (let i = 0; i < repositories.length; i++) {
     // Append the project element to the projectList
     projectList.appendChild(project);
 }
-
 });
+*/
+
