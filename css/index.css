@@ -17,7 +17,7 @@ body {
 /* Apply spacing between sections */
 section {
     margin-bottom: 20px;
-    padding-top: 60px; /* Adjust this value based on your header height */
+    padding-top: 120px; /* Adjust this value based on your header height */
     margin-bottom: 20px;
 }
 
@@ -33,7 +33,7 @@ h1, h2, h3 {
     font-size: 40px; /* Adjust the font size as needed */
     color: #8c43e6; /* Adjust the text color as needed */
     /* Add any other styles for the .custom-font class here */
-    padding-top: 80px;
+    padding-top: 4px;
     text-shadow: 4px 2px rgb(221, 139, 183);
     align-items: center;
     margin-top: 20px;
@@ -110,14 +110,13 @@ header {
 /* Navigation menu */
 nav {
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
 nav a {
     color: #0e0101;
     text-decoration: none;
-    padding: 10px;
+    padding: 25px;
 }
 
 /* Flexbox layout for the Experience items */
@@ -181,6 +180,40 @@ nav a {
     background-color: #71bed8;
 }
 
+/*MESSAGES SECTION IN FLEXBOX*/
+#messages {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#messages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#messages li {
+    border: 1px solid #dc2121;
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: center
+    width: calc(45% - 10px);
+}
+
+#messages li span {
+        display: inline-block;
+        border: 1px solid #dc2121;
+        padding: 8px;
+        margin: 30px;
+        width: calc(45% - 10px);
+}
+
 /* Media queries for responsiveness */
 
 /* For screens up to 767px (mobile) */
@@ -197,6 +230,8 @@ nav a {
     #leave-message .message-form {
         width: 100%;
     }
+     
+    };
 }
 
 /* For screens between 768px and 1023px (tablets) */

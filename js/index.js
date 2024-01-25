@@ -14,7 +14,7 @@ var footer = document.querySelector('footer');
 var copyright = document.createElement('p');
 
 //set the inner HTML of your copyright element to display your name and current year. HINT: use thisYear variable from earlier
-copyright.innerHTML = "@ " + " Kai Yau " + thisYear;
+copyright.innerHTML = "©" + " Kai Yau " + thisYear;
 
 //using "DOM Manipulation", append the copyright elment to the footer. HINT: appendChild method
 footer.appendChild(copyright);
@@ -25,7 +25,9 @@ footer.appendChild(copyright);
 var skills = [
     "JavaScript",
     "HTML 5",
-    "CSS 3"
+    "CSS 3",
+    "Version Control System",
+    "Media Queries",
 ];
 //can use console.log(skills) to access the array of skills
 
