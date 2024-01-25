@@ -12,7 +12,6 @@ body {
     /* Apply the Google Fonts font-family to the body */
     color: #333; /* Default text color */
     background: linear-gradient(rgba(231, 225, 230, 0.5), rgba(211, 182, 166, 0.8), rgb(246, 234, 243))
-    
 }
 
 /* Apply spacing between sections */
@@ -29,11 +28,21 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+.custom-font {
+    font-family: 'Merienda', sans-serif; /* Replace 'YourDesiredFont' with the actual font name you want to use */
+    font-size: 40px; /* Adjust the font size as needed */
+    color: #8c43e6; /* Adjust the text color as needed */
+    /* Add any other styles for the .custom-font class here */
+    padding-top: 80px;
+    text-shadow: 4px 2px rgb(221, 139, 183);
+    align-items: center;
+    margin-top: 20px;
+}
+
 /* Style list items in "Experience" and "Skills" sections */
 #experience ul, #skills ul {
     list-style-type: none;
 }
-
 
 #experience li, #skills li {
     background-color: #efea8d; /* Background color for list items */
@@ -86,7 +95,6 @@ footer {
     color: #283cd1; /* Footer text color */
     padding: 10px;
 }
-
 
 /* Sticky/fixed navigational header */
 header {
@@ -146,7 +154,6 @@ nav a {
     max-width: 300px; /* Adjust the width as needed */
 }
 
-
 .flex-form label {
     margin-bottom: 8px;
     font-size: 16px; /* Font size for labels */
@@ -174,8 +181,6 @@ nav a {
     background-color: #71bed8;
 }
 
-
-
 /* Media queries for responsiveness */
 
 /* For screens up to 767px (mobile) */
@@ -183,15 +188,12 @@ nav a {
     body {
         padding: 10px;
     }
-
     h1, h2, h3 {
         font-size: 20px;
     }
-
     #experience .experience-item {
         width: 100%;
     }
-
     #leave-message .message-form {
         width: 100%;
     }
@@ -202,7 +204,6 @@ nav a {
     h1, h2, h3 {
         font-size: 22px;
     }
-
     #experience .experience-item {
         width: calc(45% - 10px);
     }
@@ -213,29 +214,7 @@ nav a {
     h1, h2, h3 {
         font-size: 24px;
     }
-
     #experience .experience-item {
         width: calc(45% - 10px);
     }
 }
-
-/* Apply the Google Fonts font-family to the body 
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-*/
-
-.custom-font {
-    font-family: 'Merienda', sans-serif; /* Replace 'YourDesiredFont' with the actual font name you want to use */
-    font-size: 40px; /* Adjust the font size as needed */
-    color: #8c43e6; /* Adjust the text color as needed */
-    /* Add any other styles for the .custom-font class here */
-    padding-top: 80px;
-    text-shadow: 4px 2px rgb(221, 139, 183);
-    align-items: center;
-    margin-top: 20px;
-    
-    }
-    
-    
-    

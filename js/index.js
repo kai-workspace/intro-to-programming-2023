@@ -19,8 +19,6 @@ copyright.innerHTML = "@ " + " Kai Yau " + thisYear;
 //using "DOM Manipulation", append the copyright elment to the footer. HINT: appendChild method
 footer.appendChild(copyright);
 
-
-
 //BELOW ARE UNDER "SKILLS" SECTION:
 
 // 1. List your technical skills by creating an Array of String values and store it in a variable named skills
@@ -29,12 +27,11 @@ var skills = [
     "HTML 5",
     "CSS 3"
 ];
-    //can use console.log(skills) to access the array of skills
+//can use console.log(skills) to access the array of skills
 
 //2. Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection. HINT: querySelector or getElementById method
 //var skillsSection = document.querySelector("#skills");
 var skillsSection = document.getElementById("skills");
-
 
 //3. Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
 var skillsList = skillsSection.querySelector("ul");
@@ -44,14 +41,12 @@ var skillsList = skillsSection.querySelector("ul");
 for (var i=0; i<skills.length; i++){
      var skill = document.createElement("li");
     
-
-//6. On the next line, set the inner text of your skill variable to the value of the current Array element. HINT: access the Array element using bracket notation
+    //6. On the next line, set the inner text of your skill variable to the value of the current Array element. HINT: access the Array element using bracket notation
     skill.innerText = skills[i];
 
-//On the next line, append the skill element to the skillsList element. HINT: appendChild method
+    //On the next line, append the skill element to the skillsList element. HINT: appendChild method
     skillsList.appendChild(skill);  
 }
-
 
 //HANDLE MESSAGE FORM SUBMIT
 
@@ -77,58 +72,53 @@ messageForm.addEventListener('submit', function(event) {
     console.log('Name:', userName);
     console.log('Email:', userEmail);
     console.log('Message:', userMessage);
-
     
-    //DISPLAY MESSAGES IN LIST
+//DISPLAY MESSAGES IN LIST
 
-    // Use "DOM Selection" to select the #messages section by id and store it in a variable named messageSection
-    var messageSection = document.getElementById('messages');
+// Use "DOM Selection" to select the #messages section by id and store it in a variable named messageSection
+var messageSection = document.getElementById('messages');
 
-    // Use "DOM Selector", Query the messageSection (instead of the entire document) to find the <ul> element and store it in a variable named messageList
-    var messageList = messageSection.querySelector('ul');
+// Use "DOM Selector", Query the messageSection (instead of the entire document) to find the <ul> element and store it in a variable named messageList
+var messageList = messageSection.querySelector('ul');
   
-    // Create a new list item (li) element and store it in a variable named newMessage
-    var newMessage = document.createElement('li');
+// Create a new list item (li) element and store it in a variable named newMessage
+var newMessage = document.createElement('li');
   
-    // Set the inner HTML of the newMessage element with the following info: 
-        // <a> element that displays the "usersName" and links to the "usersEmail" (HINT: use the mailto: prefix)
-        // <span> element that displays the "usersMessage"
-    newMessage.innerHTML = '<a href="mailto:' + userEmail + '">' + userName + '</a> wrote:  <span>' + userMessage + '</span>';
+// Set the inner HTML of the newMessage element with the following info: 
+// <a> element that displays the "usersName" and links to the "usersEmail" (HINT: use the mailto: prefix)
+// <span> element that displays the "usersMessage"
+newMessage.innerHTML = '<a href="mailto:' + userEmail + '">' + userName + '</a> wrote:  <span>' + userMessage + '</span>';
   
-    // Create a new <button> element and store it in a variable named removeButton
-
-        
-    var removeButton = document.createElement('button');
+// Create a new <button> element and store it in a variable named removeButton    
+var removeButton = document.createElement('button');
   
-        // Set properties for the removeButton
-        // Set the inner text to "remove"
-        // Set the type attribute to "button"
-    removeButton.innerText = 'remove';
-    removeButton.type = 'button';
+// Set properties for the removeButton
+// Set the inner text to "remove"
+// Set the type attribute to "button"
+removeButton.innerText = 'remove';
+removeButton.type = 'button';
   
-        // Add an event listener to the removeButton element that handles the "click" event
-            // Inside the callback function, find the button's parent element using DOM Traversal (hint: parentNode property) and store it in a variable named entry
-            // Remove the entry element from the DOM (hint: remove method)
-    removeButton.addEventListener('click', function() 
-    {
-            // Find the button's parent element using DOM Traversal
-    var entry = removeButton.parentNode;
-            // Remove the entry element from the DOM
-    entry.remove();
-    });
-  
-        // Append the removeButton to the newMessage element. HINT: appendChild method
-        newMessage.appendChild(removeButton);
-  
-        // Append the newMessage to the messageList element. 
-        messageList.appendChild(newMessage);
-  
-
-   // Inside the callback function, on the very last line, add a new line of code to clear the form. HINT: reset method
-    messageForm.reset();
-
+// Add an event listener to the removeButton element that handles the "click" event
+// Inside the callback function, find the button's parent element using DOM Traversal (hint: parentNode property) and store it in a variable named entry
+// Remove the entry element from the DOM (hint: remove method)
+removeButton.addEventListener('click', function() 
+{
+// Find the button's parent element using DOM Traversal
+var entry = removeButton.parentNode;
+// Remove the entry element from the DOM
+entry.remove();
 });
 
+// Append the removeButton to the newMessage element. HINT: appendChild method
+newMessage.appendChild(removeButton);
+  
+// Append the newMessage to the messageList element. 
+messageList.appendChild(newMessage);
+  
+// Inside the callback function, on the very last line, add a new line of code to clear the form. HINT: reset method
+messageForm.reset();
+
+});
 
 //FETCH GITHUB REPOSITORIES
 // Assuming you have a variable GITHUB_USERNAME with your GitHub username
